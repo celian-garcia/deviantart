@@ -1703,6 +1703,14 @@ class Api(object):
 
         return response
 
+    def get_stash(self, stackid):
+        """Fetch a stash stack's metadata
+        :param staskid: Id of the stack
+        """
+       
+        response = self._req('/stash/{}'.format(stackid))
+
+        return response
 
 
     def _req(self, endpoint, get_data=dict(), post_data=dict()):
